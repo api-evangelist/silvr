@@ -1,0 +1,83 @@
+generated: '2026-08-17'
+method: probed
+source: live GET of /.well-known/* on every host named in apis.yml
+note: >-
+  Recorded ABSENCE. Every /.well-known/* path returned HTTP 404 on both silvr.co and
+  www.silvr.co. The 404 body is a Webflow string ("Invalid .well-known request", 88 bytes),
+  not a document, so nothing was saved and NO WellKnown or SecurityTxt pointer is wired in
+  apis.yml. Silvr has no API host of its own: there is no api.silvr.co, app.silvr.co,
+  docs.silvr.co, developers.silvr.co or status.silvr.co in DNS (NXDOMAIN on all), and the
+  marketing site is a Webflow deployment. silvr.io is a DIFFERENT, unrelated company and was
+  excluded from the probe.
+hosts_probed:
+- host: www.silvr.co
+  resolves: true
+  server: Webflow
+- host: silvr.co
+  resolves: true
+  server: Webflow
+- host: api.silvr.co
+  resolves: false
+  note: NXDOMAIN
+- host: app.silvr.co
+  resolves: false
+  note: NXDOMAIN
+- host: docs.silvr.co
+  resolves: false
+  note: NXDOMAIN
+- host: developers.silvr.co
+  resolves: false
+  note: NXDOMAIN
+- host: status.silvr.co
+  resolves: false
+  note: NXDOMAIN
+documents:
+- path: /.well-known/security.txt
+  status: 404
+  file: null
+- path: /.well-known/openid-configuration
+  status: 404
+  file: null
+- path: /.well-known/oauth-authorization-server
+  status: 404
+  file: null
+- path: /.well-known/oauth-protected-resource
+  status: 404
+  file: null
+- path: /.well-known/api-catalog
+  status: 404
+  file: null
+- path: /.well-known/ai-plugin.json
+  status: 404
+  file: null
+- path: /.well-known/agent-card.json
+  status: 404
+  file: null
+- path: /.well-known/agent.json
+  status: 404
+  file: null
+contract_discovery:
+  note: >-
+    STEP 0b contract discovery. All candidate spec paths returned HTTP 404 with the Webflow
+    marketing 404 page (39,744 bytes of text/html), not a spec. No GraphQL surface, no MCP
+    endpoint, no agent card. Nothing was saved.
+  probes:
+  - {url: 'https://www.silvr.co/openapi.json', status: 404, body: html-404}
+  - {url: 'https://www.silvr.co/openapi.yaml', status: 404, body: html-404}
+  - {url: 'https://www.silvr.co/swagger.json', status: 404, body: html-404}
+  - {url: 'https://www.silvr.co/v1/openapi.json', status: 404, body: html-404}
+  - {url: 'https://www.silvr.co/api-docs', status: 404, body: html-404}
+  - {url: 'https://www.silvr.co/docs', status: 404, body: html-404}
+  - {url: 'https://www.silvr.co/redoc', status: 404, body: html-404}
+  - {url: 'https://www.silvr.co/graphql', status: 404, body: html-404}
+  - {url: 'https://www.silvr.co/asyncapi.yaml', status: 404, body: html-404}
+  - {url: 'https://www.silvr.co/llms.txt', status: 404, body: html-404}
+  - {url: 'https://docs.silvr.co/', status: 0, body: dns-nxdomain}
+  - {url: 'https://api.silvr.co/', status: 0, body: dns-nxdomain}
+  - {url: 'https://developers.silvr.co/', status: 0, body: dns-nxdomain}
+  registries:
+  - {registry: npm, query: silvr, result: no first-party package (only unrelated third-party names)}
+  - {registry: pypi, package: silvr, status: 404}
+  - {registry: rubygems, package: silvr, status: 404}
+  - {registry: 'crates.io', query: silvr, result: 0 crates}
+  - {registry: github, query: 'org:silvr', status: 404, note: no Silvr GitHub organization exists}

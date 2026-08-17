@@ -1,0 +1,27 @@
+generated: '2026-08-17'
+method: searched
+source: https://www.silvr.co/
+docs: null
+plan_count: 0
+note: >-
+  Silvr published NO API plans and no pricing page. https://www.silvr.co/pricing returns HTTP 404
+  and no /pricing entry exists in the sitemap. Silvr was a lender, not an API vendor: the only
+  published commercial terms were financing parameters (business loans of EUR 5,000 to EUR 10,000,000,
+  eligibility decision in minutes), and the fee/commission for a given facility was quoted per
+  applicant rather than listed. The partner/embedded-finance offering on
+  https://www.silvr.co/partners was presented in three unpriced integration tiers (Light widget,
+  Medium API, Full infrastructure) behind a "become a partner" form which now redirects to Karmen.
+  An honest zero, not an omission.
+plans: []
+commercial_terms:
+- item: Business loan facility size
+  value: EUR 5,000 - EUR 10,000,000
+  source: https://www.silvr.co/product/business-loan
+- item: Partner integration tiers
+  value: Light (widget, redirect) / Medium (API, white-label real-time eligibility) / Full (native infrastructure)
+  priced: false
+  source: https://www.silvr.co/partners
+evidence:
+- {url: 'https://www.silvr.co/pricing', status: 404}
+- {url: 'https://www.silvr.co/partners', status: 200}
+- {url: 'https://www.silvr.co/product/business-loan', status: 200}

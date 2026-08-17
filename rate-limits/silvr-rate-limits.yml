@@ -1,0 +1,18 @@
+generated: '2026-08-17'
+method: searched
+source: https://www.silvr.co/partners
+docs: null
+limit_count: 0
+note: >-
+  Silvr published no rate limits, because it published no API reference of any kind. There is no
+  developer portal, no API documentation host (docs./developers./api.silvr.co are all NXDOMAIN),
+  and therefore no documented request quota, window, burst allowance, 429 behaviour or
+  X-RateLimit-*/RateLimit-*/Retry-After response headers. The partner API advertised on
+  https://www.silvr.co/partners was only ever reachable through a "become a partner" sales form,
+  which now redirects to Karmen. An honest zero.
+rate_limits: []
+headers: []
+evidence:
+- {url: 'https://www.silvr.co/partners', status: 200}
+- {url: 'https://docs.silvr.co/', status: 0, note: NXDOMAIN}
+- {url: 'https://developers.silvr.co/', status: 0, note: NXDOMAIN}

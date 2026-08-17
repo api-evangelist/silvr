@@ -1,9 +1,18 @@
 aid: silvr
 name: Silvr
-description: 'Silvr is a company surfaced as a portfolio company of serena and added to the API Evangelist
-  network as a stub for enrichment. Sector: fintech-insurtech. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: 'Silvr (Silvr Groupe SAS, Neuilly-sur-Seine, France) was a French fintech that brought
+  Revenue Based Financing to Europe, underwriting non-dilutive growth capital for e-commerce, SaaS and
+  digital SMEs from its own Silvr Analytics scoring model and later broadening into flexible business
+  loans of EUR 5k-10M covering receivables advances, inventory and equipment financing and working
+  capital. Founded in 2020 by Nima Karimi and Gregory Tappero, it raised a EUR 130M Series A plus EUR
+  200M in debt from Citi and Channel, with ISAI, Serena, XAnge, Otium, Eurazeo and Bpifrance on the
+  cap table. Silvr declared cessation of payments in June 2025; on 2 December 2025 the Nanterre court
+  awarded Karmen the takeover of all Silvr assets except the non-performing loan portfolio, and
+  silvr.co now redirects applicants and logins to app.karmen.io. Silvr marketed an embedded-finance
+  partner API for real-time eligibility, but never published a developer portal, API reference or
+  machine-readable contract, and that partner funnel now points at Karmen.'
 url: https://raw.githubusercontent.com/api-evangelist/silvr/refs/heads/main/apis.yml
+image: https://cdn.prod.website-files.com/6462b9f508a3cf04f201948d/6463bbf2935ab4f2d9b9c42c_Silvr_logo_black.svg
 x-type: company
 x-source: serena-portfolio
 x-tier: stub
@@ -14,6 +23,14 @@ modified: '2026-08-17'
 tags:
 - Company
 - Fintech Insurtech
+- Lending
+- Revenue Based Financing
+- Embedded Finance
+- Working Capital
+- Invoice Financing
+- SME Finance
+- France
+- Acquired
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -22,4 +39,52 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://silvr.co/
+  url: https://www.silvr.co/
+- type: Blog
+  url: https://www.silvr.co/blog
+- type: HelpCenter
+  url: https://silvrspace.notion.site/Client-Help-Center-42f217ee279c4c32acbeac5506bdd54e
+- type: TermsOfService
+  url: https://www.silvr.co/legal
+- type: PrivacyPolicy
+  url: https://www.silvr.co/legal
+- type: FAQ
+  url: https://www.silvr.co/faq
+- type: About
+  url: https://www.silvr.co/about
+- type: Press
+  url: https://www.silvr.co/press
+- type: CaseStudies
+  url: https://www.silvr.co/case-studies
+- type: Partners
+  url: https://www.silvr.co/partners
+- type: DomainSecurity
+  url: security/silvr-domain-security.yml
+- type: LLMsTxt
+  url: llms/silvr-llms.txt
+x-enrichment:
+  date: '2026-08-17'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: defunct
+  detail: >-
+    Silvr Groupe SAS declared cessation of payments in June 2025 and on 2 December 2025 the Nanterre
+    court awarded Karmen the takeover of all its assets bar the non-performing loan portfolio, so
+    silvr.co is now a Webflow marketing archive whose apply and login buttons redirect to
+    app.karmen.io; the embedded-finance partner API it once marketed never had a public reference and
+    every spec, /.well-known and developer-host probe returns 404 or NXDOMAIN.
+  evidence:
+  - url: https://www.silvr.co/openapi.json
+    status: 404
+  - url: https://www.silvr.co/.well-known/agent-card.json
+    status: 404
+  - url: https://docs.silvr.co/
+    status: 0
+  - url: https://www.silvr.co/partners
+    status: 200
+  - url: https://app.karmen.io/sign-up?utm_source=silvr
+    status: 200
+  checked: '2026-08-17'

@@ -1,0 +1,50 @@
+# Silvr
+
+> Silvr (Silvr Groupe SAS, Neuilly-sur-Seine, France) was a French fintech that brought Revenue Based Financing to Europe and later offered flexible business loans of EUR 5,000 to EUR 10,000,000 to French SMEs — receivables advances, inventory financing, equipment financing and working capital — underwritten by its own Silvr Analytics scoring model. Silvr declared cessation of payments in June 2025; on 2 December 2025 the Nanterre court awarded Karmen the takeover of all Silvr assets except the non-performing loan portfolio. silvr.co remains online as a marketing and case-study archive and redirects applications and logins to app.karmen.io.
+
+## Status
+
+- Operating status: absorbed. Assets acquired by Karmen (announced 2 December 2025); applications and logins redirect to app.karmen.io.
+- API surface: none published. No developer portal, no API reference, no OpenAPI/AsyncAPI/GraphQL/Postman artifact, no SDK on any public registry, no GitHub organization.
+- Successor: Karmen (https://www.karmen.io/). Karmen's API is Karmen's own product and is NOT catalogued under this Silvr profile.
+
+## Company
+
+- [Silvr](https://www.silvr.co/): Company website (Webflow marketing + case-study archive).
+- [About Silvr](https://www.silvr.co/about): Company background and team.
+- [Press](https://www.silvr.co/press): Press coverage and announcements.
+- [Blog](https://www.silvr.co/blog): Articles on SME financing.
+- [Karmen reprend Silvr](https://www.silvr.co/blog/karmen-reprend-silvr): The acquisition announcement (2 December 2025).
+- [Legal](https://www.silvr.co/legal): Terms of service, privacy policy and cookie policy. Legal entity Silvr Groupe SAS, SIREN 884 558 453, RCS Nanterre.
+
+## Products
+
+- [Business loan](https://www.silvr.co/product/business-loan): Flexible business loans, EUR 5,000 to EUR 10,000,000.
+- [Receivables advance](https://www.silvr.co/use-cases/receivables-advance): Invoice / receivables financing.
+- [Inventory financing](https://www.silvr.co/use-cases/inventory-financing): Stock purchase financing.
+- [Equipment financing](https://www.silvr.co/use-cases/equipment-financing): Equipment purchase financing.
+- [Working capital](https://www.silvr.co/use-cases/working-capital): Working-capital management.
+
+## Partners and integration
+
+- [Partners](https://www.silvr.co/partners): Embedded-finance partner programme, described in three integration tiers — Light (plug-and-play widget with redirect), Medium (API and integrated white-label journey with real-time eligibility), Full (native infrastructure with custom workflows). No public API reference or machine-readable contract was ever published for any tier; the "become a partner" call to action now points at Karmen.
+
+## Support
+
+- [Client Help Center](https://silvrspace.notion.site/Client-Help-Center-42f217ee279c4c32acbeac5506bdd54e): Notion-hosted customer help centre.
+- [FAQ](https://www.silvr.co/faq): Frequently asked questions.
+- [Case studies](https://www.silvr.co/case-studies): Customer case studies.
+
+## Catalog artifacts
+
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/silvr/refs/heads/main/apis.yml): APIs.json 0.20 profile for Silvr.
+- [Domain security](https://raw.githubusercontent.com/api-evangelist/silvr/refs/heads/main/security/silvr-domain-security.yml): Probed TLS/HSTS/DNSSEC/CAA/SPF/DMARC posture for silvr.co.
+- [Well-known probe](https://raw.githubusercontent.com/api-evangelist/silvr/refs/heads/main/well-known/silvr-well-known.yml): Recorded absence — every /.well-known/* path and every candidate spec path returned 404.
+- [Plans](https://raw.githubusercontent.com/api-evangelist/silvr/refs/heads/main/plans/silvr-plans-pricing.yml): No API plans published (plan_count 0).
+- [Rate limits](https://raw.githubusercontent.com/api-evangelist/silvr/refs/heads/main/rate-limits/silvr-rate-limits.yml): No rate limits published (limit_count 0).
+
+## Notes for agents
+
+- There is nothing here to call. Silvr exposes no callable endpoint, no authentication scheme and no contract.
+- Do not treat Karmen's API as Silvr's. They were competitors until December 2025; Karmen acquired Silvr's assets, and any Karmen contract belongs to a Karmen profile.
+- silvr.io is an unrelated company and is not Silvr Groupe SAS.
