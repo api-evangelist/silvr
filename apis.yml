@@ -12,6 +12,17 @@ description: 'Silvr (Silvr Groupe SAS, Neuilly-sur-Seine, France) was a French f
   partner API for real-time eligibility, but never published a developer portal, API reference or
   machine-readable contract, and that partner funnel now points at Karmen.'
 url: https://raw.githubusercontent.com/api-evangelist/silvr/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://cdn.prod.website-files.com/6462b9f508a3cf04f201948d/6463bbf2935ab4f2d9b9c42c_Silvr_logo_black.svg
 x-type: company
 x-source: serena-portfolio
