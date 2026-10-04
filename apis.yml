@@ -120,6 +120,6 @@ x-coverage:
     status: 0
   - url: https://www.silvr.co/partners
     status: 200
-  - url: https://app.karmen.io/sign-up?utm_source=silvr
+  - url: https://app.karmen.io/sign-up
     status: 200
   checked: '2026-08-17'
